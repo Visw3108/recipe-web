@@ -1,0 +1,10 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect requests to remove .php extension
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirect requests to remove .html extension
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
