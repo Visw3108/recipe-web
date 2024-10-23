@@ -163,11 +163,31 @@ ul {
 }
 
 body {
-  /* font-family: Arial, sans-serif; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  overflow: hidden; /* Prevent body scrolling */
+  height: 100vh; /* Set height to full viewport */
 }
+
+.scroll-container {
+  height: 100vh; /* Set container height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  position: relative; /* Ensure positioning for popup */
+  padding-right: 15px; /* Prevents scrollbar from overlaying content */
+}
+
+/* Optional: For a smoother scrollbar */
+.scroll-container::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: var(--grey-300); /* Color of the scrollbar */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-400); /* Color on hover */
+}
+
 
 .popup {
   display: none; /* Initially hidden */
