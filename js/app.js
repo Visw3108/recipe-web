@@ -35,32 +35,30 @@ document.getElementById('subscribeBtn').onclick = function() {
   document.getElementById('popup').style.display = 'none';
 };
 
+let lastKnownScrollPosition = 0;
+let ticking = false;
 
-// Show the popup when the page loads
-window.onload = function() {
-  document.getElementById('popup').style.display = 'flex';
-};
+function doSomething(scrollPos) {
+  // Do something with the scroll position
+}
 
-// Close the popup when 'Maybe Later' is clicked
-document.getElementById('maybeLaterBtn').onclick = function() {
-  document.getElementById('popup').style.display = 'none';
-};
+window.addEventListener('scroll', function() {
+  lastKnownScrollPosition = window.scrollY;
 
-// Show "Thank You" popup when 'Subscribe Now' is clicked
-document.getElementById('subscribeBtn').onclick = function() {
-  const popupContent = document.getElementById('popup-content');
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
 
-  // Update popup content to display "Thank You" message
-  popupContent.innerHTML = `
-      <h2>Thank You!</h2>
-      <p>Thank you for subscribing. We will keep you updated with the latest news and recipes!</p>
-      <div class="popup-buttons">
-          <button id="closePopupBtn" class="btn btn-gray">Close</button>
-      </div>
-  `;
+    ticking = true;
+  }
+});
 
-  // Add event listener to the Close button
-  document.getElementById('closePopupBtn').onclick = function() {
-      document.getElementById('popup').style.display = 'none';
-  };
-};
+
+const scrollContainer = document.querySelector('.scroll-container');
+
+scrollContainer.addEventListener('scroll', (e) => {
+    e.preventDefault(); // Prevent default scroll behavior
+    scrollContainer.scrollTop = scrollContainer.scrollTop; // Reset scroll position
+});
