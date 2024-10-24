@@ -116,19 +116,7 @@
 
 
     <?php
-    // Database connection details
-    $servername = "localhost";
-    $username = "root";
-    $password = ""; // Your MySQL root password, if set
-    $dbname = "recipeweb";
-
-    // Create connection to MySQL
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
+    include "../config.php";
 
     // Handling form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

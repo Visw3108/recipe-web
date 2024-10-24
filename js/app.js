@@ -25,15 +25,15 @@ window.onload = function() {
 };
 
 // Close the popup when 'Maybe Later' is clicked
-document.getElementById('maybeLaterBtn').onclick = function() {
+/* document.getElementById('maybeLaterBtn').onclick = function() {
   document.getElementById('popup').style.display = 'none';
-};
+}; */
 
 // You can also add a similar action for the 'Subscribe Now' button if needed
-document.getElementById('subscribeBtn').onclick = function() {
+/* document.getElementById('subscribeBtn').onclick = function() {
   alert("Subscribed!"); // Add your subscription logic here
   document.getElementById('popup').style.display = 'none';
-};
+}; */
 
 let lastKnownScrollPosition = 0;
 let ticking = false;

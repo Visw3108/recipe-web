@@ -112,23 +112,11 @@
 
     <?php
     session_start();
-    // Database connection details
-    $servername = "localhost";
-    $username = "root";
-    $password = ""; // Your MySQL root password
-    $dbname = "recipeweb";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
+    include "../config.php";
 
     // Handling form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $email = $_POST['email'];
+      $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
       $password = $_POST['password'];
 
       // Prepare statement to avoid SQL injection
@@ -143,17 +131,21 @@
 
         // Verify the hashed password
         if (password_verify($password, $row['password'])) {
+          // Regenerate session ID to prevent session fixation
+          session_regenerate_id(true);
+
           // Set session variables for logged-in user
-          $_SESSION['email'] = $row['email'];
+          $_SESSION['email'] = $row['emailid']; // Use 'emailid' for consistency
+          $_SESSION['user_id'] = $row['id']; // Store user ID for better identification
 
           // Redirect to dashboard
-          header("Location: dashboard");
+          header("Location: dashboard"); // Make sure this path matches your project structure
           exit();
         } else {
-          echo "<p style='color: red;'>Incorrect password!</p>";
+          $_SESSION['error'] = "Incorrect password!";
         }
       } else {
-        echo "<p style='color: red;'>User does not exist!</p>";
+        $_SESSION['error'] = "User does not exist!";
       }
 
       // Close statement
@@ -162,7 +154,14 @@
 
     // Close connection
     $conn->close();
+
+    // Redirect back to login page if there's an error
+    if (isset($_SESSION['error'])) {
+      header("Location: index");
+      exit();
+    }
     ?>
+
   </div>
 </body>
 
