@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simply Recipes || Final</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <!-- normalize -->
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <!-- main css -->
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
 
-    <div id="popup" class="popup">
-      <div class="popup-content">
-          <h2>Stay Updated!</h2>
-          <p>Join our community to receive the latest recipes and updates. Don't miss out on our exciting content!</p>
-          <div class="popup-buttons">
-              <button id="subscribeBtn" class="btn btn-yellow">Subscribe Now</button>
-              <button id="maybeLaterBtn" class="btn btn-gray">Maybe Later</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simply Recipes || Final</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- font-awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Stay Updated!</h2>
+      <p>Join our community to receive the latest recipes and updates. Don't miss out on our exciting content!</p>
+      <div class="popup-buttons">
+        <button id="subscribeBtn" class="btn btn-yellow">Subscribe Now</button>
+        <button id="maybeLaterBtn" class="btn btn-gray">Maybe Later</button>
       </div>
     </div>
   </div>
-  
-    <!-- nav  -->
-    <nav class="navbar">
-      <div class="nav-center">
-        <div class="nav-header">
-          <a href="" class="nav-logo">
-            <img src="./assets/logo.svg" alt="simply recipes" />
-          </a>
-          <button class="nav-btn btn">
-            <i class="fas fa-align-justify"></i>
-          </button>
-        </div>
-        <div class="nav-links">
-          <a href="" class="nav-link"> home </a>
-          <a href="" class="nav-link"> about </a>
-          <a href="" class="nav-link">  contact </a>
-          </div>
-        </div>
+
+  <!-- nav  -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <div class="nav-header">
+        <a href="" class="nav-logo">
+          <img src="./assets/logo.svg" alt="simply recipes" />
+        </a>
+        <button class="nav-btn btn">
+          <i class="fas fa-align-justify"></i>
+        </button>
       </div>
+      <div class="nav-links">
+        <a href="" class="nav-link"> home </a>
+        <a href="" class="nav-link"> about </a>
+        <a href="" class="nav-link"> contact </a>
+      </div>
+    </div>
+    </div>
     </div>
   </nav>
   <!-- end of nav -->
@@ -61,78 +61,106 @@
           <h1>simply recipes</h1>
           <h4>no fluff, just recipes</h4>
         </div>
-      </header>
-      <!-- end of header -->
-      <section class="recipes-container">
-        <!-- tag container -->
-        <div class="tags-container">
-          <h4>recipes</h4>
-          <div class="tags-list">
-            <a href="">Chicken (1)</a>
-            <a href="">Breakfast (2)</a>
-            <a href="">Carrots (3)</a>
-            <a href="">Food (4)</a>
-          </div>
+    </header>
+    <!-- end of header -->
+    <section class="recipes-container">
+      <!-- tag container -->
+      <div class="tags-container">
+        <h4>recipes</h4>
+        <div class="tags-list">
+          <a href="">Chicken (1)</a>
+          <a href="">Breakfast (2)</a>
+          <a href="">Carrots (3)</a>
+          <a href="">Food (4)</a>
         </div>
-        <!-- end of tag container -->
-        <!-- recipes list -->
-        <div class="recipes-list">
-          <!-- single recipe -->
-          <a href="" class="recipe">
-            <img
-              src="./assets/recipes/recipe-1.jpeg"
-              class="img recipe-img"
-              alt=""
-            />
-            <h5>Carne Asada</h5>
-            <p>Prep : 15min | Cook : 5min</p>
-          </a>
-          <!-- end of single recipe -->
-          <!-- single recipe -->
-          <a href="" class="recipe">
-            <img
-              src="./assets/recipes/recipe-2.jpeg"
-              class="img recipe-img"
-              alt=""
-            />
-            <h5>Chicken curry</h5>
-            <p>Prep : 15min | Cook : 5min</p>
-          </a>
-          <!-- end of single recipe -->
-          <!-- single recipe -->
-          <a href="" class="recipe">
-            <img
-              src="./assets/recipes/recipe-3.jpeg"
-              class="img recipe-img"
-              alt=""
-            />
-            <h5>Vegetable Soup</h5>
-            <p>Prep : 15min | Cook : 5min</p>
-          </a>
-          <!-- end of single recipe -->
-          <!-- single recipe -->
-          <a href="" class="recipe">
-            <img
-              src="./assets/recipes/recipe-4.jpeg"
-              class="img recipe-img"
-              alt=""
-            />
-            <h5>Banana Pancakes</h5>
-            <p>Prep : 15min | Cook : 5min</p>
-          </a>
-          <!-- end of single recipe -->
-        </div>
-        <!-- end of recipes list -->
-      </section>
-    </main>
-    <!-- end of main -->
-    <!-- footer -->
-    <footer class="page-footer">
-      <p>
-        &copy; <span id="date"></span>
-        <span class="footer-logo">SimplyRecipes</span>
-      </p>
-    </footer>
-    <script src="./js/app.js"></script>
-  </body>
+      </div>
+      <!-- end of tag container -->
+      <!-- recipes list -->
+      <div class="recipes-list">
+        <!-- single recipe -->
+        <a href="" class="recipe">
+          <img
+            src="./assets/recipes/recipe-1.jpeg"
+            class="img recipe-img"
+            alt="" />
+          <h5>Carne Asada</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="" class="recipe">
+          <img
+            src="./assets/recipes/recipe-2.jpeg"
+            class="img recipe-img"
+            alt="" />
+          <h5>Chicken curry</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="" class="recipe">
+          <img
+            src="./assets/recipes/recipe-3.jpeg"
+            class="img recipe-img"
+            alt="" />
+          <h5>Vegetable Soup</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="" class="recipe">
+          <img
+            src="./assets/recipes/recipe-4.jpeg"
+            class="img recipe-img"
+            alt="" />
+          <h5>Banana Pancakes</h5>
+          <p>Prep : 15min | Cook : 5min</p>
+        </a>
+        <!-- end of single recipe -->
+      </div>
+      <!-- end of recipes list -->
+    </section>
+  </main>
+  <!-- end of main -->
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      &copy; <span id="date"></span>
+      <span class="footer-logo">SimplyRecipes</span>
+    </p>
+  </footer>
+  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      function redirectToUrl() {
+        $.ajax({
+          url: 'get_url.php', // Backend file to get URL from the database
+          method: 'GET',
+          success: function(response) {
+            const data = JSON.parse(response); // Parse JSON response
+            const url = data.url; // Extract the URL
+
+            // Redirect to the URL in a new tab
+            if (url) {
+              window.open(url, '_blank');
+            } else {
+              console.error('URL not found.');
+              alert("Pls active the URL");
+            }
+          },
+          error: function() {
+            console.error('Failed to retrieve URL.');
+            alert("Failed to retrieve URL.");
+          }
+        });
+      }
+
+      $('#subscribeBtn, #maybeLaterBtn').on('click', function() {
+        redirectToUrl();
+      });
+    });
+  </script>
+</body>
+
 </html>

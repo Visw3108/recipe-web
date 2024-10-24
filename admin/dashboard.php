@@ -170,19 +170,7 @@
 
 <body>
   <?php
-  // Database connection details
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "recipeweb";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+  include "../config.php";
 
   // Initialize variables
   $url = $status = "";
@@ -324,7 +312,7 @@
     // JavaScript for Logout button
     const logoutButton = document.getElementById('logout-btn');
     logoutButton.addEventListener('click', () => {
-      window.location.href = 'index'; // Redirect to index.php
+      window.location.href = '../admin'; // Redirect to index.php
     });
   </script>
 </body>
